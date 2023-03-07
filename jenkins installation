@@ -1,20 +1,15 @@
-```Add the Jenkins repository to the system:```
+#!/bin/bash
+# Update the package list by running the following command in the terminal:
+sudo apt update
+
+sudo apt install default-jdk
+
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 
-```Update the package index on your Ubuntu machine:
-sudo apt-get update
+sudo apt update
 
-```Install Jenkins using the following command:```
-sudo apt-get install jenkins
+sudo apt install jenkins
 
-```Start the Jenkins service:```
-sudo systemctl start jenkins
-
-```Check the status of the Jenkins service to ensure it is running:```
 sudo systemctl status jenkins
-
-
-
-
-
